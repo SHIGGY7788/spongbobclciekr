@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="./output.css" rel="stylesheet">
+  <title>Spongbob Clicker</title>
+</head>
+<body>
+
+    <style>
+        /*Custom cursor is spat.webp*/
+        * {
+            cursor: url(/images/curzer.png), auto;
+            user-select: none;
+        }
+        body {
+          background-image: url("/images/krabbybackground.jpg");
+        }
+    </style>
+
+  <div>
+    <h1 class="text-white underline italic text-center text-3xl select-none">Spongbob clicker</h1>
+    <!--money-->
+
+    <div class="flex justify-center">
+      <img src="/images/cashamonay.jpg" class="h-[50px] w-[100px] mr-5">
+      <div>
+        <p class="text-white text-2xl select-none text-center">Bob bucks: $<span id="money" class="text-white text-2xl select-none">15000</span></p>
+        <p class="text-white text-2xl select-none text-center">Bob bucks per second: $<span id="moneyPerSecond" class="text-white text-2xl select-none">0</span></p>
+      </div>
+
+      <img src="/images/cashamonay.jpg" class="h-[50px] w-[100px] ml-5">
+    </div>
+    <div class="flex justify-center space-x-4 mt-5">
+        
+        <img src="/images/krabpaty.webp" class="w-[125px] h-[125px] rounded-2xl" id="cook">
+        <img src="/images/spat.webp" class='bg-red-500 w-[125px] h-[125px] rounded-2xl ' id="CookUpg">
+        <!--upg cost-->
+        <p class="text-white text-2xl mt-[5%]">Cost: $<span id="cookUpgCost">10</span></p>
+        <!--Upgrade counter-->
+        <p class="text-white text-2xl mt-[5%]">X <span id="cookUpgCount">0</span></p>
+    </div>
+
+    <!--Auto Patrick Farm-->
+    <div class="flex justify-center mt-5 ">
+      <div class="border-4 border-black h-[200px] w-[500px] rounded-lg bg-black">
+        <button class="absolute ml-[10rem] mt-[5rem] bg-black text-white rounded-lg h-[2rem] w-[10rem] visible" id="patrickUnlock">
+          Unlock Patty Mines $500
+        </button>
+        <div class="bg-black backdrop-blur-xl h-max w-max visible opacity-10" id="blocker">
+          <p class="absolute hidden text-white text-2xl mt-[5px] ml-[5px] bg-black rounded select-none" >Click me to buy more patrick</p>
+          <img src="/images/putpatricktowork.jfif" class="h-[192px] w-[492px] bg-transparent rounded-lg" id="buyPatrick">
+        </div>
+      </div>
+      <div class="flex justify-center ml-2 mt-12 hidden" id="patrickInfo">
+        <div class="bg-black text-white w-[15rem] h-[6rem] p-3 rounded-xl">
+          <p>Patricks: <span id="PatrickWorkerCount">0</span></p>
+          <p>Bob Bucks per second: <span id="PatrickCashPerSecond">0</span></p>
+          <p>Cost per Patrick: $<span id="patCost">50</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+    <!--Employ spongbob maid
+    <img src="/images/spongmaid.webp">
+    -->
+    <div class="flex justify-center mt-5 ">
+      <div class="border-4 border-black h-[200px] w-[500px] rounded-lg bg-black">
+        <button class="absolute ml-[10rem] mt-[5rem] bg-black text-white rounded-lg h-[2rem] w-[10rem] visible" id="maidUnlock">
+          Unlock SpongBob Maid Service $10000
+        </button>
+        <div class="bg-black backdrop-blur-xl h-max w-max visible opacity-10" id="maidBlocker">
+          <p class="absolute hidden text-white text-2xl mt-[5px] ml-[5px] bg-black rounded select-none" >Cick me to hire more maids</p>
+          <img src="/images/spongmaid.webp" class="h-[192px] w-[492px] bg-transparent rounded-lg" id="buyMaid">
+        </div>
+      </div>
+      <div class="flex justify-center ml-2 mt-12 hidden" id="maidInfo">
+        <div class="bg-black text-white w-[15rem] h-[6rem] p-3 rounded-xl">
+          <p>Maid Count: <span id="maidWorkerCount">0</span></p>
+          <p>Bob Bucks per second: <span id="maidCashPerSecond">0</span></p>
+          <p>Cost To Hire Maid: $<span id="maidCost">500</span></p>
+        </div>
+      </div>
+    </div>
+
+
+
+
+  </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
